@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A393A65A-B303-4287-B7B6-AD4CEAF90138}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UMS.Framework.NpoiUtil</RootNamespace>
+    <AssemblyName>UMS.Framework.NpoiUtil</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NPOI">
+      <HintPath>..\packages\UMS.Application.Project.1.2.108.1206\lib\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\packages\UMS.Application.Project.1.2.108.1206\lib\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\packages\UMS.Application.Project.1.2.108.1206\lib\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\packages\UMS.Application.Project.1.2.108.1206\lib\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attribute\BooleanAttribute.cs" />
+    <Compile Include="Attribute\DataItemAttribute.cs" />
+    <Compile Include="Attribute\DepartmentAttribute.cs" />
+    <Compile Include="Enum\ConfigType.cs" />
+    <Compile Include="Enum\Excel\ExcelBorderType.cs" />
+    <Compile Include="Enum\Excel\ExcelCellStyleType.cs" />
+    <Compile Include="Enum\Excel\ExcelCountType.cs" />
+    <Compile Include="Enum\Excel\ExcelCurrencyType.cs" />
+    <Compile Include="Enum\Excel\ExcelDateType.cs" />
+    <Compile Include="Enum\Excel\ExcelFractionType.cs" />
+    <Compile Include="Enum\Excel\ExcelFuncType.cs" />
+    <Compile Include="Enum\Excel\ExcelNumberType.cs" />
+    <Compile Include="Enum\Excel\ExcelSpecialType.cs" />
+    <Compile Include="Enum\ExportExcelSuffix.cs" />
+    <Compile Include="Enum\ExportExcelType.cs" />
+    <Compile Include="Enum\MergeAlign.cs" />
+    <Compile Include="Enum\PathType.cs" />
+    <Compile Include="Enum\TemplateType.cs" />
+    <Compile Include="Enum\UrlType.cs" />
+    <Compile Include="Enum\Word\AddPictureType.cs" />
+    <Compile Include="Enum\Word\ColorType.cs" />
+    <Compile Include="Enum\Word\FontNameType.cs" />
+    <Compile Include="Enum\Word\FontSizeType.cs" />
+    <Compile Include="Enum\Word\PageType.cs" />
+    <Compile Include="Extend\Excel\CellExtend.cs" />
+    <Compile Include="Extend\Excel\CellStyleExtend.cs" />
+    <Compile Include="Extend\Excel\ExcelColorExtend.cs" />
+    <Compile Include="Extend\Excel\ExcelExtend.cs" />
+    <Compile Include="Extend\Excel\ExcelPictureExtend.cs" />
+    <Compile Include="Extend\Excel\FunctionExtend.cs" />
+    <Compile Include="Extend\Excel\SheetExtend.cs" />
+    <Compile Include="Extend\NpoiExcelExtend.cs" />
+    <Compile Include="Extend\NpoiWordExtend.cs" />
+    <Compile Include="Main\ExportUtil.cs" />
+    <Compile Include="Main\ImportUtil.cs" />
+    <Compile Include="Main\TemplateDownloadUtil.cs" />
+    <Compile Include="Main\TemplateExportUtil.cs" />
+    <Compile Include="Model\DynamicEntity.cs" />
+    <Compile Include="Model\Excel\CellDataEntity.cs" />
+    <Compile Include="Model\Excel\CellDimension.cs" />
+    <Compile Include="Model\Excel\CellHelpEntity.cs" />
+    <Compile Include="Model\Excel\CellImportEntity.cs" />
+    <Compile Include="Model\Excel\CellMarkEntity.cs" />
+    <Compile Include="Model\Excel\CellMergeEntity.cs" />
+    <Compile Include="Model\Excel\CellStyleEntity.cs" />
+    <Compile Include="Model\Excel\ColorEntity.cs" />
+    <Compile Include="Model\Excel\CommentEntity.cs" />
+    <Compile Include="Model\Excel\FontEntity.cs" />
+    <Compile Include="Model\Excel\ImportDataEntity.cs" />
+    <Compile Include="Model\Excel\INameInfo.cs" />
+    <Compile Include="Model\Excel\PictureEntity.cs" />
+    <Compile Include="Model\Excel\PictureInfo.cs" />
+    <Compile Include="Model\Export\ExportColumnEntity.cs" />
+    <Compile Include="Model\Export\ExportPictureEntity.cs" />
+    <Compile Include="Model\Export\ExportRunEntity.cs" />
+    <Compile Include="Model\Export\ExportSheetEntity.cs" />
+    <Compile Include="Model\Export\ExportTemplateEntity.cs" />
+    <Compile Include="Model\Export\ExportTitleEntity.cs" />
+    <Compile Include="Model\Word\TableCell.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\DynamicUtil.cs" />
+    <Compile Include="Util\Excel\CellUtil.cs" />
+    <Compile Include="Util\ExportExcelUtil.cs" />
+    <Compile Include="Util\ProcessEnum.cs" />
+    <Compile Include="Util\StringUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Util\Word\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
